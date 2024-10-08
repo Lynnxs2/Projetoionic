@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="ark">
+    <ion-title id="title2">
+      Games API
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Pesquisar Jogos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nome do Jogo</ion-label>
+        <ion-input [(ngModel)]="searchQuery" (ionInput)="onSearch()"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+ 
+  <ion-button expand="full" (click)="toggleFilterVisibility()">
+    {{ isFilterVisible ? 'Ocultar Filtro de Data' : 'Mostrar Filtro de Data' }}
+  </ion-button>
+
+ 
+  <ion-card *ngIf="isFilterVisible">
+    <ion-card-header>
+      <ion-card-title>Filtrar por Data</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Data de Início</ion-label>
+        <ion-datetime [(ngModel)]="startDate" displayFormat="YYYY-MM-DD"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Data de Fim</ion-label>
+        <ion-datetime [(ngModel)]="endDate" displayFormat="YYYY-MM-DD"></ion-datetime>
+      </ion-item>
+
+      <ion-button expand="full" (click)="onFilterByDate()">Aplicar Filtro</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Jogos Filtrados por Data e Plataforma</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let filteredGame of filteredGames">
+          <ion-label>
+            <h3>{{ filteredGame.name }}</h3>
+            <p>Data de Lançamento: {{ filteredGame.released }}</p>
+            <p>Nota: {{ filteredGame.rating }}</p>
+            
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Todos os Jogos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let game of games">
+          <ion-label>
+            <h3>{{ game.name }}</h3>
+            <p>Data de Lançamento: {{ game.released }}</p>
+            <p>Nota: {{ game.rating }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

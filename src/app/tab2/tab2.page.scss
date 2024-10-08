@@ -1,0 +1,44 @@
+.hidden {
+    display: none;
+  }
+
+  ion-card {
+    margin-bottom: 20px;
+  }
+  
+  ion-card-header {
+    background-color: black;
+  }
+  
+  ion-card-title {
+    font-weight: bold;
+  }
+  
+  ion-item {
+    margin-bottom: 10px;
+  }
+  
+  ion-button {
+    margin-top: 10px;
+    opacity: 0.95;
+  }
+
+  #title2{
+    color:rgb(9, 217, 144);
+}
+  
+
+ion-content{
+  --background: none;
+  background-image: url("../../assets/Zelda.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: darkgrey;
+
+}
+
+ion-card{
+  opacity: 0.95;
+}
+

@@ -1,0 +1,52 @@
+#title2{
+    color:rgb(9, 217, 144);
+}
+
+ion-content{
+    --background: none;
+    background-image: url("../../assets/Zelda.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: darkgrey;
+  
+  }
+
+  
+ion-card{
+    opacity: 0.95;
+}
+
+ion-card-header {
+    background-color: black;
+  }
+  
+  ion-card-title {
+    font-weight: bold;
+  }
+  
+  ion-item {
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif; /* Altere para a fonte desejada */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: 400; /* Peso da fonte */
+    color: #ffffff; /* Cor da fonte */
+    
+  }
+  
+  ion-button {
+    margin-top: 10px;
+    opacity: 0.95;
+  }
+
+  ion-select{
+    color:rgb(9, 217, 144);
+  }
+  
+  .label-toggle-spacing ion-toggle {
+    margin-top: 4px; 
+  }
+  
+  
+
+ 

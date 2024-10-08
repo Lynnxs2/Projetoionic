@@ -1,0 +1,49 @@
+#title2{
+    color:rgb(9, 217, 144);
+}
+
+ion-content{
+    --background: none;
+    background-image: url("../../assets/Zelda.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: darkgrey;
+  
+  }
+
+ion-list{
+    opacity: 0.95;
+}
+
+.Centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    margin: 0 auto; 
+  }
+
+  .content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .content th, .content td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .content th {
+    background-color: rgb(9, 217, 144);
+    font-weight: bold;
+    color: Black;
+  }
+  
+  .content td {
+    text-align: center;
+    color: white;
+    
+  }

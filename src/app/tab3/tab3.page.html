@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="ark">
+    <ion-title id="title2">
+      Pesquisas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Survey sobre Jogos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Pesquisa de Opinião</ion-card-title>
+      <ion-card-subtitle>Responda sobre suas preferências de jogos</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="submitSurvey()">
+      
+        <ion-item>
+          <ion-label position="stacked">Qual é o seu jogo favorito?</ion-label>
+          <ion-input type="text" [(ngModel)]="surveyData.favoriteGame" name="favoriteGame"></ion-input>
+        </ion-item>
+
+      
+        <ion-item>
+          <ion-label class="text1" position="stacked">Quantas horas por semana você joga?</ion-label>
+          <ion-select [(ngModel)]="surveyData.playTime" name="playTime">
+            <ion-select-option value="menos de 5h">Menos de 5 horas</ion-select-option>
+            <ion-select-option value="5-10h">5 a 10 horas</ion-select-option>
+            <ion-select-option value="10-20h">10 a 20 horas</ion-select-option>
+            <ion-select-option value="mais de 20h">Mais de 20 horas</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        
+        <ion-item>
+          <ion-label position="stacked">Qual gênero de jogo você prefere?</ion-label>
+          <ion-select [(ngModel)]="surveyData.gameGenre" name="gameGenre" multiple="true">
+            <ion-select-option value="ação">Ação</ion-select-option>
+            <ion-select-option value="aventura">Aventura</ion-select-option>
+            <ion-select-option value="rpg">RPG</ion-select-option>
+            <ion-select-option value="estratégia">Estratégia</ion-select-option>
+            <ion-select-option value="outro">Outro</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        
+        <ion-item class="label-toggle-spacing">
+          <ion-label position="stacked">Você costuma jogar jogos online?</ion-label> 
+          <ion-toggle [(ngModel)]="surveyData.onlineGames" name="onlineGames"></ion-toggle> 
+        </ion-item>
+
+        
+        <ion-item>
+          <ion-label position="stacked">Qual plataforma você utiliza para jogar?</ion-label>
+          <ion-select [(ngModel)]="surveyData.platform" name="platform">
+            <ion-select-option value="pc">PC</ion-select-option>
+            <ion-select-option value="console">Console</ion-select-option>
+            <ion-select-option value="mobile">Mobile</ion-select-option>
+            <ion-select-option value="outro">Outro</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Pergunta 6 -->
+        <ion-item>
+          <ion-label position="stacked">O que mais te atrai em um jogo?</ion-label>
+          <ion-textarea [(ngModel)]="surveyData.attraction" name="attraction"></ion-textarea>
+        </ion-item>
+
+        <ion-button expand="full" type="submit">Enviar Pesquisa</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
