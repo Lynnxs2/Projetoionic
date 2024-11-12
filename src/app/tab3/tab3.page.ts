@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-tab3', // Prioridade para Tab3
-  templateUrl: 'tab3.page.html', // Certifique-se de que o arquivo HTML esteja correto
+  selector: 'app-tab3', 
+  templateUrl: 'tab3.page.html', 
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  // Estrutura de dados da pesquisa
+  
   surveyData = {
     favoriteGame: '',
     playTime: '',
@@ -16,11 +17,21 @@ export class Tab3Page {
     attraction: ''
   };
 
-  constructor() {}
+  feedbackMessage: string | null = null;
 
-  
+  constructor(private location: Location) {}
+
   submitSurvey() {
     console.log('Dados da pesquisa:', this.surveyData);
     
+    
+    this.feedbackMessage = "Obrigado por responder!";
+
+    
+    setTimeout(() => {
+      this.feedbackMessage = null;
+      this.location.go(this.location.path()); 
+      window.location.reload(); 
+    }, 4000);
   }
 }

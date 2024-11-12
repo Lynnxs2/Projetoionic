@@ -1,0 +1,77 @@
+/* Usando o mesmo estilo do Login para o Cadastro */
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2 {
+    color: rgb(9, 217, 144); /* Verde para o título */
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  ion-item {
+    margin-bottom: 15px;
+  }
+  
+  ion-input {
+    background-color: #333;
+    color: white;
+    text-align: center; /* Centraliza o texto dentro do campo */
+  }
+  
+  ion-input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Cor clara para o placeholder */
+    font-size: 14px; /* Tamanho de fonte semelhante ao do Login */
+    text-align: center; /* Centraliza o texto do placeholder */
+  }
+  
+  .login-btn {
+    background-color: #00ff00; /* Verde para o botão de cadastro */
+    color: black;
+    margin-top: 20px;
+  }
+  
+  .register-container {
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .register-container p {
+    margin-bottom: 10px;
+  }
+  
+  ion-button {
+    --border-radius: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+  }
+  
+  ion-header {
+    --background: #000; /* Fundo preto */
+  }
+  
+  ion-toolbar {
+    color: rgb(9, 217, 144); /* Cor da toolbar */
+  }
+  
+  ion-title {
+    color: rgb(9, 217, 144); /* Título da barra de ferramentas em verde */
+  }
+
+  ion-content {
+    --background: none;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), /* Gradiente com opacidade */
+      url("../../assets/Zelda.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+  

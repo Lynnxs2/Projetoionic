@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="ark">
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="background-color: #000;">
+  <div class="login-container"> <!-- Mantemos a mesma classe que o Login -->
+    <h2>Cadastre-se</h2>
+
+    <ion-item>
+      <ion-label position="stacked"></ion-label>
+      <ion-input type="text" [(ngModel)]="cadastroData.username" name="username" placeholder="Digite seu nome de usuário (Opcional)"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"></ion-label>
+      <ion-input type="email" [(ngModel)]="cadastroData.email" name="email" placeholder="Digite seu email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"></ion-label>
+      <ion-input type="password" [(ngModel)]="cadastroData.password" name="password" placeholder="Digite sua senha"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="register()" class="login-btn">Cadastrar</ion-button>
+
+    <div class="register-container">
+      <p>Já tem uma conta?</p>
+      <ion-button fill="clear" [routerLink]="['/tabs/login']">Fazer login</ion-button> <!-- Redireciona para a página de Login -->
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,66 @@
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2 {
+    color:rgb(9, 217, 144); /* Verde para o título */
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .login-input {
+    margin-bottom: 15px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .login-btn {
+    background-color: #00ff00; /* Verde para o botão de login */
+    color: black;
+    margin-top: 20px;
+  }
+  
+  .register-container {
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .register-container p {
+    margin-bottom: 10px;
+  }
+  
+  ion-button {
+    --border-radius: 50px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+  }
+  
+  ion-header {
+    --background: #000; 
+  }
+  
+  ion-toolbar {
+    color: rgb(9, 217, 144);
+  }
+  
+  ion-title {
+    color: rgb(9, 217, 144); 
+  }
+
+  ion-content {
+    --background: none;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), /* Gradiente com opacidade */
+      url("../../assets/Zelda.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="ark">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="background-color: #000;">
+  <div class="login-container">
+    <h2>Bem-vindo</h2>
+
+    <ion-input placeholder="Email" [(ngModel)]="email" type="email" class="login-input"></ion-input>
+    <ion-input placeholder="Senha" [(ngModel)]="senha" type="password" class="login-input"></ion-input>
+
+    <ion-button expand="full" (click)="login()" class="login-btn">Entrar</ion-button>
+
+    <div class="register-container">
+      <p>Não tem uma conta?</p>
+      <ion-button fill="clear" [routerLink]="['/tabs/cadastro']">Cadastrar-se</ion-button> <!-- Redireciona para a página de Cadastro -->
+    </div>
+  </div>
+</ion-content>  

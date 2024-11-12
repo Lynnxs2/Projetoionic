@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Autenticação de Firebase</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="background-color: #000;">
+  
+    
+  <div class="login-container">
+    <h2>Firebase</h2>
+    <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
+    <ion-input [(ngModel)]="password" placeholder="Senha" type="password"></ion-input>
+
+    <ion-button expand="full" (click)="login()">Login</ion-button>
+    <ion-button expand="full" (click)="register()">Cadastrar</ion-button>
+  </div>
+</ion-content>

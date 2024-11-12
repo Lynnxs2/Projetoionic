@@ -24,8 +24,23 @@ const routes: Routes = [
         loadChildren: () => import('../tab4/tab4.module').then(m => m.Tab4PageModule)
       },
       {
+        path: 'login',
+        loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
+      },
+
+      {
+        path: 'cadastro',  
+        loadChildren: () => import('../cadastro/cadastro.module').then(m => m.CadastroPageModule)
+      },
+
+      {
+        path: 'firebase',
+        loadChildren: () => import('../firebase/firebase.module').then(m => m.FirebasePageModule),
+      },
+      
+      {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/login',
         pathMatch: 'full'
       }
     ]

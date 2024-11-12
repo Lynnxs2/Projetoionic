@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../services/game.service';
 
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
